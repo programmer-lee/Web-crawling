@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title with Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center; /* 중앙 정렬을 위한 수정 */
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .link-container {
+            background-color: #fff;
+            margin: 1rem 0;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .link-container a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .link-container a:hover {
+            text-decoration: underline;
+        }
+        .menu-bar {
+            display: inline; /* 항상 메뉴를 보여줍니다 */
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            cursor: pointer;
+            margin: 0 10px;
+            border-radius: 8px;
+        }
+        .menu-content {
+            display: none;
+            padding: 1rem;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+            border-radius: 0 0 8px 8px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .menu-bar {
+                display: block;
+                background-color: #333;
+                color: #fff;
+                padding: 1rem;
+                cursor: pointer;
+                margin: 0 10px;
+                border-radius: 8px;
+            }
+            .menu-bar.active + .menu-content {
+                display: block;
+            }
+            .menu-content {
+                background-color: #333;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 0;
+                color: #fff;
+            }
+            .menu-bar-fixed {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 999;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Title with Links</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <div class="menu-bar" onclick="toggleMenu(1)">
+            Menu 1
+            <div class="menu-content" id="menu-content-1">
+                <p>Content for Menu 1</p>
+            </div>
+        </div>
+        <div class="menu-bar" onclick="toggleMenu(2)">
+            Menu 2
+            <div class="menu-content" id="menu-content-2">
+                <p>Content for Menu 2</p>
+            </div>
+        </div>
+        <div class="menu-bar" onclick="toggleMenu(3)">
+            Menu 3
+            <div class="menu-content" id="menu-content-3">
+                <p>Content for Menu 3</p>
+            </div>
+        </div>
+        <div class="menu-bar" onclick="toggleMenu(3)">
+            Menu 4
+            <div class="menu-content" id="menu-content-3">
+                <p>Content for Menu 3</p>
+            </div>
+        </div>
+        <div class="menu-bar" onclick="toggleMenu(3)">
+            Menu 5
+            <div class="menu-content" id="menu-content-3">
+                <p>Content for Menu 3</p>
+            </div>
+        </div>
+        <div class="menu-bar" onclick="toggleMenu(3)">
+            Menu 6
+            <div class="menu-content" id="menu-content-3">
+                <p>Content for Menu 3</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>What do you want politics post</h2>
+        <div class="link-container">
+            <h2><a href="https://www.example.com" target="_blank">Go to Example.com</a></h2>
+        </div>
+        <div class="link-container">
+            <h2><a href="https://www.anotherexample.com" target="_blank">Visit AnotherExample.com</a></h2>
+        </div>
+        <div class="link-container">
+            <h2><a href="https://www.yetanotherexample.com" target="_blank">Check out YetAnotherExample.com</a></h2>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu(menuNumber) {
+            var menuContent = document.getElementById("menu-content-" + menuNumber);
+            menuContent.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합 커뮤니티 웹페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        section#home {
+            background-color: #fff;
+            margin: 1rem 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+        
+        section#popular .post, section#categories .category {
+            display: inline-block;
+            margin: 1rem;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        section#popular .post img, section#categories .category img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+        
+        section#popular .post .summary {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            width: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+            transform: translateY(100%);
+            text-align: left;
+            font-size: 0.9rem;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        section#popular .post:hover .summary {
+            transform: translateY(0);
+        }
+        
+        section#categories .category img {
+            border-radius: 8px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        
+        /* 반응형 스타일 */
+        @media (min-width: 481px) and (max-width: 768px) {
+            section#popular .post, section#categories .category {
+                width: 48%;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            section#popular .post, section#categories .category {
+                width: 30%;
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            section#popular .post, section#categories .category {
+                width: 23%;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>종합 커뮤니티</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#popular">인기 게시물</a></li>
+                <li><a href="#categories">카테고리</a></li>
+                <li><a href="#login">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>환영합니다!</h2>
+        <p>여러분의 관심사에 맞춘 커뮤니티 인기 게시물을 한 곳에서 만나보세요.</p>
+    </section>
+
+    <section id="popular">
+        <h2>인기 게시물</h2>
+        <div class="post">
+            <img src="./politics.png" href="politics.html" alt="게시물 이미지">
+            <h3>정치 인기 게시물 제목 1</h3>
+            <div class="summary">
+                <a href="https://gall.dcinside.com/board/lists/?id=stock_new2">디시인사이드 정치 갤러리</a>
+                <a href="https://news.kbs.co.kr/news/pc/category/category.do?ctcd=0003&ref=pSiteMap#20240529&1">KBS 정치</a>
+      
+            </div>
+        </div>
+        <div class="post">
+            <img src="./financial.png" alt="게시물 이미지">
+            <h3>경제 인기 게시물 제목 2</h3>
+            <div class="summary">게시물 내용 요약...</div>
+        </div>
+        <div class="post">
+            <img src="./social.png" alt="게시물 이미지">
+            <h3>사회 인기 게시물 제목 3</h3>
+            <div class="summary">게시물 내용 요약...</div>
+        </div>
+        <div class="post">
+            <img src="./sports.png" alt="게시물 이미지">
+            <h3>스포츠 인기 게시물 제목 4</h3>
+            <div class="summary">게시물 내용 요약...
+                <a href="https://gall.dcinside.com/board/lists/?id=football_k">디시인사이드 국내 축구 갤러리</a>
+                <a href="https://gall.dcinside.com/board/lists/?id=basketball">디시인사이드 국내 농구 갤러리</a>
+                <a href=" https://cafe.naver.com/cornrow">네이버 농구 카페</a>
+                
+            </div>
+        </div>
+        <div class="post">
+            <img src="./entertainment.png" alt="게시물 이미지">
+            <h3>연예 인기 게시물 제목 5</h3>
+            <div class="summary">게시물 내용 요약...</div>
+        </div>
+        <div class="post">
+            <img src="./weather.png" alt="게시물 이미지">
+            <h3>날씨 인기 게시물 제목 6</h3>
+            <div class="summary">게시물 내용 요약...</div>
+        </div>
+        <!-- 더 많은 인기 게시물들 -->
+    </section>
+
+    <section id="categories">
+        <h2>카테고리</h2>
+        <div class="category">
+            <img src="img/category1.jpg" alt="카테고리 이미지">
+            <h3>카테고리 1</h3>
+        </div>
+        <div class="category">
+            <img src="img/category2.jpg" alt="카테고리 이미지">
+            <h3>카테고리 2</h3>
+        </div>
+        <!-- 더 많은 카테고리들 -->
+    </section>
+
+    <section id="login">
+        <h2>로그인</h2>
+        <form>
+            <label for="username">사용자 이름:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">로그인</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 종합 커뮤니티. 모든 권리 보유.
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded and parsed');
+            // 여기에 로그인 기능, 게시물 필터링 등 다양한 기능을 추가할 수 있습니다.
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title with Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center; /* 중앙 정렬을 위한 수정 */
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        .link-container {
+            background-color: #fff;
+            margin: 1rem 0;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .link-container a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        .link-container a:hover {
+            text-decoration: underline;
+        }
+        .menu-bar {
+            display: inline; /* 항상 메뉴를 보여줍니다 */
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            cursor: pointer;
+            margin: 0 10px;
+            border-radius: 8px;
+        }
+        .menu-content {
+            display: none;
+            padding: 1rem;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+            border-radius: 0 0 8px 8px;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .menu-bar {
+                display: block;
+                background-color: #333;
+                color: #fff;
+                padding: 1rem;
+                cursor: pointer;
+                margin: 0 10px;
+                border-radius: 8px;
+            }
+            .menu-bar.active + .menu-content {
+                display: block;
+            }
+            .menu-content {
+                background-color: #333;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 0;
+                color: #fff;
+            }
+            .menu-bar-fixed {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 999;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>경제</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <a href="politics.html">
+            <div class="menu-bar">
+                    정치
+                    <div class="menu-content" id="menu-content-1">
+                        <p>Content for Menu 1</p>
+                    </div>
+                </div>
+        </a>
+        <a href="financial.html">
+            <div class="menu-bar">
+                    경제
+                    <div class="menu-content" id="menu-content-1">
+                        <p>Content for Menu 1</p>
+                    </div>
+                </div>
+        </a>
+        <a href="social.html">
+            <div class="menu-bar">
+                    사회
+                    <div class="menu-content" id="menu-content-1">
+                        <p>Content for Menu 1</p>
+                    </div>
+                </div>
+        </a>
+        <a href="sports.html">
+            <div class="menu-bar">
+                    스포츠
+                    <div class="menu-content" id="menu-content-1">
+                        <p>Content for Menu 1</p>
+                    </div>
+                </div>
+        </a>
+        <a href="entertainment.html">
+            <div class="menu-bar">
+                    연예
+                    <div class="menu-content" id="menu-content-1">
+                        <p>Content for Menu 1</p>
+                    </div>
+                </div>
+        </a>
+    </section>
+
+    <section>
+        <h2>What do you want weather post</h2>
+        <div class="link-container">
+            <h2><a href="http://www.weatheri.co.kr/" target="_blank">웨더아이</a></h2>
+        </div>
+        <div class="link-container">
+            <h2><a href="http://www.weathernews.com/" target="_blank">웨더뉴스</a></h2>
+        </div>
+        <div class="link-container">
+            <h2><a href="https://weather.naver.com/" target="_blank">네이버 날씨</a></h2>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu(menuNumber) {
+            var menuContent = document.getElementById("menu-content-" + menuNumber);
+            menuContent.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
