@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합 커뮤니티 웹페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #fff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        section#popular .post, section#categories .category {
+            display: inline-block;
+            margin: 1rem;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        section#popular .post img, section#categories .category img {
+            max-width: 100%;
+            height: auto;
+        }
+
+       
+
+        /* 반응형 스타일 */
+        @media (min-width: 481px) and (max-width: 768px) {
+            section#popular .post, section#categories .category {
+                width: 48%;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            section#popular .post, section#categories .category {
+                width: 30%;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            section#popular .post, section#categories .category {
+                width: 23%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!--<h1>종합 커뮤니티</h1>-->
+        <img src="C:\Users\USER\웹프로그래밍\웹프로젝트\Commu.NET-logo.png" alt="환영합니다~!">
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#popular">인기 게시물</a></li>
+                <li><a href="#categories">카테고리</a></li>
+                <li><a href="#login">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>환영합니다!</h2>
+        <p>여러분의 관심사에 맞춘 커뮤니티 인기 게시물을 한 곳에서 만나보세요.</p>
+    </section>
+
+    <section id="popular">
+        <h2>인기 게시물</h2>
+        <div class="post">
+            <img src="img/popular1.jpg" alt="Post Image">
+            <h3>인기 게시물 제목 1</h3>
+            <p>게시물 내용 요약...</p>
+        </div>
+        <div class="post">
+            <img src="img/popular2.jpg" alt="Post Image">
+            <h3>인기 게시물 제목 2</h3>
+            <p>게시물 내용 요약...</p>
+        </div>
+        <!-- 더 많은 인기 게시물들 -->
+    </section>
+
+    <section id="categories">
+        <h2>카테고리</h2>
+        <div class="category">
+            <img src="img/category1.jpg" alt="Category Image">
+            <h3>카테고리 1</h3>
+        </div>
+        <div class="category">
+            <img src="img/category2.jpg" alt="Category Image">
+            <h3>카테고리 2</h3>
+        </div>
+        <!-- 더 많은 카테고리들 -->
+    </section>
+
+    <section id="login">
+        <h2>로그인</h2>
+        <form>
+            <label for="username">사용자 이름:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">로그인</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 커뮤넷 모든 권리 보유.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded and parsed');
+            // 여기에 로그인 기능, 게시물 필터링 등 다양한 기능을 추가할 수 있습니다.
+        });
+    </script>
+</body>
+</html>
