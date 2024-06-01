@@ -76,6 +76,11 @@
             transform: translateX(0);
         }
 
+        table {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
         footer {
             background-color: #333;
             color: #fff;
@@ -115,7 +120,7 @@
             <ul>
                 <li><a href="popular post.html">홈</a></li>
                 <li><a href="#popular">인기 게시물</a></li>
-                <li><a href="#categories">카테고리</a></li>
+                <li><a href="#categories">실시간 뉴스</a></li>
                 <li><a href="#login">로그인</a></li>
             </ul>
         </nav>
@@ -199,13 +204,17 @@
 
     <section id="login">
         <h2>로그인</h2>
-        <form>
-            <label for="username">사용자 이름:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">비밀번호:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">로그인</button>
-        </form>
+        <table>
+            <tr>
+                <td><label for="username">사용자 이름:</label></td>
+                <td><input type="text" id="username" name="username" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">비밀번호:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+                <td><button type="submit">로그인</button></td>
+            </tr>
+        </table>
     </section>
 
     <footer>
